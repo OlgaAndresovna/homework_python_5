@@ -3,7 +3,7 @@
 # n = int (input('Введите число: '))
 # m = int (input('Введите его степень: '))
 # def power (n , m ):
-#     if (m == 1):
+#     if (m == 1, 0):
 #         return (n)
 #     if (m != 1): 
 #         return (n * power (n, m - 1))
@@ -14,12 +14,18 @@
 a = int (input('Введите первое число: '))
 b = int (input('Введите второе число: '))
 def product(a, b):
-    if (a < b):
-        return product(b, a)
-    elif (b != 0):
-        return (a + product(a, b-1))
-    else:
-        return 0
+    if a == 0:
+        return b
+    return product(a - 1, b + 1)
 print("Сумма двух чисел будет: ", product(a, b))
+
+
+
+
+
+
+
+
+
 
 
